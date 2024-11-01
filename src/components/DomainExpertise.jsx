@@ -67,7 +67,7 @@ const DomainExpertise = () => {
             style={{
               backgroundImage: `url(${highlight.bgImage})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'center-right',
               backgroundRepeat: 'no-repeat',
             }}
           >
