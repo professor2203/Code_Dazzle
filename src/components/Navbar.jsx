@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -18,20 +17,21 @@ import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null); // State for dropdown menu
+  const [anchorEl, setAnchorEl] = useState(null); // For handling dropdown menu
 
   // Toggle Drawer
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
 
-  // Handle menu open/close
+  // Open Profile Dropdown
   const handleProfileClick = (event) => {
-    setAnchorEl(event.currentTarget); // Set anchor element for dropdown
+    setAnchorEl(event.currentTarget);
   };
 
+  // Close Profile Dropdown
   const handleMenuClose = () => {
-    setAnchorEl(null); // Close the dropdown menu
+    setAnchorEl(null);
   };
 
   // Navigation Links
@@ -45,6 +45,10 @@ const Navbar = () => {
       text: "Profile",
       path: null, // No path, will open dropdown instead
       isDropdown: true,
+      dropdownLinks: [
+        { text: "Miss Tuba", path: "/missTuba" },
+        { text: "Mr. Umair", path: "/mrumair" },
+      ],
     },
   ];
 
@@ -77,8 +81,17 @@ const Navbar = () => {
                   open={Boolean(anchorEl)}
                   onClose={handleMenuClose}
                 >
-                  <MenuItem onClick={handleMenuClose}>Miss Tuba</MenuItem>
-                  <MenuItem onClick={handleMenuClose}>Mr. Umair</MenuItem>
+                  {link.dropdownLinks.map((dropdownLink) => (
+                    <MenuItem
+                      key={dropdownLink.text}
+                      onClick={() => {
+                        handleMenuClose();
+                        window.location.href = dropdownLink.path; // Use your routing method
+                      }}
+                    >
+                      {dropdownLink.text}
+                    </MenuItem>
+                  ))}
                 </Menu>
               </div>
             ) : (
@@ -117,17 +130,39 @@ const Navbar = () => {
             </ListItem>
             {navLinks.map((link) =>
               link.isDropdown ? (
-                <ListItem button key={link.text} onClick={handleProfileClick}>
-                  <ListItemText primary={link.text} />
-                </ListItem>
+                <div key={link.text}>
+                  <ListItem button onClick={handleProfileClick}>
+                    <ListItemText primary={link.text} />
+                  </ListItem>
+                  <Menu
+                    id="profile-menu"
+                    anchorEl={anchorEl}
+                    open={Boolean(anchorEl)}
+                    onClose={handleMenuClose}
+                  >
+                    {link.dropdownLinks.map((dropdownLink) => (
+                      <MenuItem
+                        key={dropdownLink.text}
+                        onClick={() => {
+                          handleMenuClose();
+                          setDrawerOpen(false);
+                          window.location.href = dropdownLink.path; // Use your routing method
+                        }}
+                      >
+                        {dropdownLink.text}
+                      </MenuItem>
+                    ))}
+                  </Menu>
+                </div>
               ) : (
                 <ListItem button key={link.text} onClick={toggleDrawer(false)}>
-                  <Link to={link.path} style={{ textDecoration: "none", color: "black", width: "100%" }}>
+                  <Link to={link.path} style={{ textDecoration: "none", color: "black" }}>
                     <ListItemText primary={link.text} />
                   </Link>
                 </ListItem>
               )
             )}
+
             <ListItem>
               <Typography variant="body1" className="flex items-center mx-auto">
                 📞 <a href="tel:03708050090" style={{ textDecoration: "none", color: "black", marginLeft: "8px" }}>03708050090</a>
