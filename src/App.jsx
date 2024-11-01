@@ -14,7 +14,8 @@ import Careers from "./pages/Careers";
 function App() {
   return (
     <Router>
-      <Header />
+      {/* <Header /> */}
+     
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,7 +27,8 @@ function App() {
           <Route path="/careers" element={<Careers />} />
         </Routes>
       </main>
-      <Footer />
+    
+      
     </Router>
   );
 }
