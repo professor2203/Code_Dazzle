@@ -2,5 +2,12 @@
 import React from "react";
 
 export default function Gallery() {
-  return <h1>Gallery Page</h1>;
+  return <>
+   <AboutHeader 
+        title="Gallery"
+        backgroundImage="../assets/afterHero.png" // Use your desired header image
+      />
+  
+  
+  </>;
 }

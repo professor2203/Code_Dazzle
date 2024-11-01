@@ -1,56 +1,101 @@
-// Navbar.js
+// src/components/Navbar.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { AppBar, Toolbar, IconButton, Drawer, List, ListItem, ListItemText, Typography } from "@mui/material";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
+  Menu,
+  MenuItem,
+} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null); // State for dropdown menu
 
   // Toggle Drawer
   const toggleDrawer = (open) => () => {
     setDrawerOpen(open);
   };
 
+  // Handle menu open/close
+  const handleProfileClick = (event) => {
+    setAnchorEl(event.currentTarget); // Set anchor element for dropdown
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null); // Close the dropdown menu
+  };
+
   // Navigation Links
   const navLinks = [
     { text: "Services", path: "/services" },
     { text: "About Us", path: "/about-us" },
-    { text: "Industries", path: "/industries" },
     { text: "Portfolio", path: "/portfolio" },
     { text: "Gallery", path: "/gallery" },
     { text: "Careers", path: "/careers" },
+    {
+      text: "Profile",
+      path: null, // No path, will open dropdown instead
+      isDropdown: true,
+    },
   ];
 
   return (
     <AppBar position="absolute" color="transparent" sx={{ boxShadow: "none" }}>
       <Toolbar className="container mx-auto flex justify-between items-center">
-        {/* Logo and Navigation Links for Desktop */}
-        <div className="hidden md:flex items-center space-x-8">
-          {/* Logo */}
-          <div className="flex items-center">
-            <img src={logo} alt="Logo" className="h-12 w-auto mr-2" />
-          </div>
-
-          {/* Desktop Navigation Links */}
-          <ul className="flex space-x-4">
-            {navLinks.map((link) => (
-              <li key={link.text}>
-                <Link to={link.path} style={{ color: "white", textDecoration: "none" }} className="hover:text-gray-300">
-                  {link.text}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {/* Logo */}
+        <div className="flex items-center space-x-8">
+          <Link to="/">
+            <img src={logo} alt="Logo" className="h-12 w-auto" />
+          </Link>
         </div>
 
-        {/* Contact Info for Desktop */}
-        <div className="hidden md:flex items-center text-white">
-          <span className="mr-2">📞</span>
-          <a href="tel:03708050090" className="hover:text-gray-300">
-            03708050090
-          </a>
+        {/* Desktop Navigation Links */}
+        <div className="hidden md:flex items-center space-x-6">
+          {navLinks.map((link) =>
+            link.isDropdown ? (
+              <div key={link.text}>
+                <Typography
+                  aria-controls={anchorEl ? "profile-menu" : undefined}
+                  aria-haspopup="true"
+                  onClick={handleProfileClick}
+                  className="text-white hover:text-gray-300 cursor-pointer"
+                >
+                  {link.text}
+                </Typography>
+                <Menu
+                  id="profile-menu"
+                  anchorEl={anchorEl}
+                  open={Boolean(anchorEl)}
+                  onClose={handleMenuClose}
+                >
+                  <MenuItem onClick={handleMenuClose}>Miss Tuba</MenuItem>
+                  <MenuItem onClick={handleMenuClose}>Mr. Umair</MenuItem>
+                </Menu>
+              </div>
+            ) : (
+              <Link
+                key={link.text}
+                to={link.path}
+                className="text-white hover:text-gray-300"
+                style={{ textDecoration: "none" }}
+              >
+                {link.text}
+              </Link>
+            )
+          )}
+          {/* Contact Info */}
+          <Typography variant="body1" className="text-white ml-4">
+            📞 <a href="tel:03708050090" className="hover:text-gray-300">03708050090</a>
+          </Typography>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -59,7 +104,7 @@ const Navbar = () => {
           color="inherit"
           aria-label="menu"
           onClick={toggleDrawer(true)}
-          className="md:hidden"  // Only show on small screens
+          className="md:hidden" // Only visible on mobile
         >
           <MenuIcon />
         </IconButton>
@@ -70,13 +115,19 @@ const Navbar = () => {
             <ListItem button onClick={toggleDrawer(false)}>
               <img src={logo} alt="Logo" className="h-12 w-auto mx-auto" />
             </ListItem>
-            {navLinks.map((link) => (
-              <ListItem button key={link.text} onClick={toggleDrawer(false)}>
-                <Link to={link.path} style={{ textDecoration: "none", color: "black", width: "100%" }}>
+            {navLinks.map((link) =>
+              link.isDropdown ? (
+                <ListItem button key={link.text} onClick={handleProfileClick}>
                   <ListItemText primary={link.text} />
-                </Link>
-              </ListItem>
-            ))}
+                </ListItem>
+              ) : (
+                <ListItem button key={link.text} onClick={toggleDrawer(false)}>
+                  <Link to={link.path} style={{ textDecoration: "none", color: "black", width: "100%" }}>
+                    <ListItemText primary={link.text} />
+                  </Link>
+                </ListItem>
+              )
+            )}
             <ListItem>
               <Typography variant="body1" className="flex items-center mx-auto">
                 📞 <a href="tel:03708050090" style={{ textDecoration: "none", color: "black", marginLeft: "8px" }}>03708050090</a>

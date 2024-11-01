@@ -2,5 +2,11 @@
 import React from "react";
 
 export default function portfolio() {
-  return <h1>portfolio page</h1>;
+  return <>
+  <AboutHeader 
+        title="portfolio"
+        backgroundImage="../assets/afterHero.png" // Use your desired header image
+      />
+  
+  </>;
 }
