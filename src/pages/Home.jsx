@@ -25,10 +25,8 @@ export default function Home() {
         <StatsOverview />
         <BusinessGrowthCard />
         <Methodology />
-        <BusinessGrowthCard />
         <LeadershipSection />
         <IndustryExperts />
-        <Content />
         <LeadershipCarousel />
         <FAQ />
         <Footer />
