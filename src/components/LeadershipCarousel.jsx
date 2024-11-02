@@ -6,19 +6,19 @@ import "slick-carousel/slick/slick-theme.css";
 
 const leadershipData = [
   {
-    name: "Prof. Dr. Javed Iqbal",
-    title: "Healthcare SME",
-    image: "/src/assets/image 1.png", // Replace with actual image path
+    name: "Miss Tuba",
+    title: "Founder",
+    image: "./api.png", // Replace with actual image path
   },
   {
-    name: "Yasir Bucha",
-    title: "Strategic Advisor",
-    image: "/src/assets/image 1.png", // Replace with actual image path
+    name: "Mr Umair",
+    title: "Director",
+    image: "./umair.jpeg", // Replace with actual image path
   },
   {
-    name: "Ayaz Qaiser",
-    title: "CTO",
-    image: "/src/assets/image 1.png", // Replace with actual image path
+    name: "Mr Nayaz",
+    title: "Co Founder",
+    image: "./nayaz.png", // Replace with actual image path
   },
   // Add more items as needed
 ];

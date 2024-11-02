@@ -4,18 +4,18 @@ import { Card, CardContent, Typography, Avatar } from '@mui/material';
 
 const leadershipData = [
   {
-    name: 'Prof. Dr. Javed Iqbal',
-    title: 'Healthcare SME',
+    name: 'Miss Tuba',
+    title: 'Founder',
     icon: <FaUserMd />,
   },
   {
-    name: 'Yasir Bucha',
-    title: 'Strategic Advisor',
+    name: 'MR Umair',
+    title: 'Director',
     icon: <FaLightbulb />,
   },
   {
-    name: 'Ayaz Qaiser',
-    title: 'CTO',
+    name: 'Mr Nayaz',
+    title: 'Co Founder',
     icon: <FaCogs />,
   },
 ];
