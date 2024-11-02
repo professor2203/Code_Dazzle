@@ -43,7 +43,6 @@ const Navbar = () => {
     { text: "Careers", path: "/careers" },
     {
       text: "Profile",
-      path: null, // No path, will open dropdown instead
       isDropdown: true,
       dropdownLinks: [
         { text: "Miss Tuba", path: "/missTuba" },
