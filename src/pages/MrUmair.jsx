@@ -18,6 +18,27 @@ const MrUmair = () => {
         textAlign: 'center',
       }}
     >
+      <Container maxWidth="md">
+        <Typography
+          variant="h3"
+          component="h1"
+          sx={{
+            fontWeight: 'bold',
+            textShadow: '0px 4px 6px rgba(0, 0, 0, 0.6)', // Adds shadow for readability
+          }}
+        >
+          Mr Umair
+        </Typography>
+        <Typography
+          variant="h6"
+          sx={{
+            mt: 2,
+            textShadow: '0px 2px 4px rgba(0, 0, 0, 0.6)', // Subtitle shadow
+          }}
+        >
+          Welcome to Mr Umair's profile page.
+        </Typography>
+      </Container>
 
       {/* Content Section */}
       <Box sx={{ py: { xs: 4, md: 8 }, px: 2 }}>
