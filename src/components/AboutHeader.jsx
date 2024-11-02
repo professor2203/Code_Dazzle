@@ -5,7 +5,7 @@ import { Box, Typography } from '@mui/material';
 export default function AboutHeader({
   title = "Service",
   tagline = "Your amazing service tagline goes here",
-  backgroundImage = "/header.svg", // Default background image
+  backgroundImage = "./image@2x.png", // Default background image
 }) {
   return (
     <Box
@@ -15,7 +15,7 @@ export default function AboutHeader({
         alignItems: 'center',
         justifyContent: 'center',
         height: '50vh',
-        backgroundImage: `url('./logo.png')`, // Use prop for background image
+        backgroundImage: `url('./image@2x.png')`, // Use prop for background image
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
