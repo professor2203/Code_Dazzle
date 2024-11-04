@@ -27,10 +27,10 @@ export default function Home() {
         <StatsOverview />
         <BusinessGrowthCard />
         <Methodology />
+        <LeadershipSection />
         <IndustryExperts />
         <LeadershipCarousel />
         <FAQ />
-        <Footer />
       </div>
     </>
   );

@@ -17,15 +17,15 @@ export default function Footer() {
     <footer className="bg-[#0c1a3c] text-white w-full py-10">
       <div className="container mx-auto px-4 py-10 md:px-20 md:py-12">
         <div className="flex flex-col md:flex-row justify-between gap-8">
-          <div className="flex flex-col gap-4 items-center">
-            <RouterLink to="/" className="flex items-center text-white">
+          <div className="flex flex-col items-center mb-6 md:mb-0">
+            <RouterLink to="/" className="flex items-center text-white mb-4">
               <img
                 src={logo}
                 alt="Code Dazzle Logo"
                 className="w-52 h-24 rounded-lg"
               />
             </RouterLink>
-            <div className="flex gap-2 mt-2 ">
+            <div className="flex gap-2">
               <a href="#" className="text-white">
                 <Facebook />
               </a>
@@ -45,7 +45,7 @@ export default function Footer() {
           </div>
 
           {/* Services Section */}
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-6 md:mb-0">
             <h6 className="mb-2 text-lg font-semibold">Services</h6>
             <ul className="space-y-1">
               {[
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
 
           {/* Get In Touch Section */}
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-6 md:mb-0">
             <h6 className="mb-2 text-lg font-semibold">Get In Touch</h6>
             <p className="flex items-center gap-2 text-sm">
               <Phone fontSize="small" /> 03708050090
@@ -83,9 +83,9 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Section */}
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-6 md:mb-0">
             <h6 className="mb-2 text-lg font-semibold">Join Our Newsletter</h6>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row gap-2">
               <input
                 type="text"
                 placeholder="Enter Email"
