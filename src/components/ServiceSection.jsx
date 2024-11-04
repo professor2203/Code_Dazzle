@@ -49,7 +49,7 @@ const ServiceSection = () => {
             backgroundImage: `url(${section.backgroundImage})`,
           }}
         >
-          <div className={`bg-white p-2 sm:p-3 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg ${section.position} ${section.borderStyles}`}>
+          <div className={`bg-white p-2 sm:p-3 rounded-lg shadow-lg max-w-xs sm:max-w-md md:max-w-lg w-[calc(100%-50px)] ${section.position} ${section.borderStyles}`}>
             <h2 className="text-xs sm:text-sm md:text-lg font-bold mb-1 sm:mb-2">{section.title}</h2>
             <p className="text-gray-700 text-xs sm:text-sm md:text-base">{section.description}</p>
           </div>
