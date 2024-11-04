@@ -56,7 +56,7 @@ function LeadershipCarousel() {
       <Slider {...settings}>
         {leadershipData.map((leader, index) => (
           <div key={index} className="p-4">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden text-center p-4 h-[460px] flex flex-col justify-between">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden text-center p-4 h-[300px] flex flex-col justify-between">
               <img
                 src={leader.image}
                 alt={leader.name}
