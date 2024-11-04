@@ -6,11 +6,11 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const FAQSection = () => {
   const faqs = [
     {
-      question: "What type of services do Xeven Solutions offer?",
+      question: "What type of services do Code Dazzle offer?",
       answer: "We offer a comprehensive range of services including AI development, chatbot solutions, and custom software development tailored to your business needs."
     },
     {
-      question: "Do Xeven Solutions offer post-development support?",
+      question: "Do Code Dazzle offer post-development support?",
       answer: "Yes, we provide extensive post-development support to ensure your solutions continue to operate efficiently and effectively."
     },
     {
@@ -22,11 +22,11 @@ const FAQSection = () => {
       answer: "Look for companies with proven experience, strong technical expertise, good communication, and a track record of successful implementations."
     },
     {
-      question: "Why choose Xeven Solutions as your AI development company?",
+      question: "Why choose Code Dazzle as your AI development company?",
       answer: "We combine technical expertise with industry experience to deliver innovative, scalable AI solutions that drive business growth."
     },
     {
-      question: "How are Xeven Solutions developers different?",
+      question: "How are Code Dazzle developers different?",
       answer: "Our developers bring a unique blend of technical skills, industry knowledge, and commitment to delivering high-quality solutions."
     }
   ];
