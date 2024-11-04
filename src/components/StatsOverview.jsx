@@ -1,21 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const StatsOverview = () => {
-  // State variables to track the original and hover states of the stats
+  // State variables to track the stats
   const [experience, setExperience] = useState(0);
   const [clients, setClients] = useState(0);
   const [employees, setEmployees] = useState(0);
   const [offices, setOffices] = useState(0);
 
-  // Function to reset a value to zero on hover
-  const handleHover = (setStat) => {
-    setStat(0);
-  };
+  // Auto increment function
+  useEffect(() => {
+    const experienceInterval = setInterval(() => {
+      setExperience((prev) => (prev < 1 ? prev + 1 : 1)); // Increase until 1
+    }, 50); // Speed of increment (50ms)
 
-  // Function to reset the value back to its original
-  const handleHoverOut = (setStat, originalValue) => {
-    setStat(originalValue);
-  };
+    const clientsInterval = setInterval(() => {
+      setClients((prev) => (prev < 10 ? prev + 1 : 10)); // Increase until 10
+    }, 100); // Speed of increment (100ms)
+
+    const employeesInterval = setInterval(() => {
+      setEmployees((prev) => (prev < 20 ? prev + 1 : 20)); // Increase until 20
+    }, 75); // Speed of increment (75ms)
+
+    const officesInterval = setInterval(() => {
+      setOffices((prev) => (prev < 1 ? prev + 1 : 1)); // Increase until 1
+    }, 150); // Speed of increment (150ms)
+
+    // Cleanup intervals on component unmount
+    return () => {
+      clearInterval(experienceInterval);
+      clearInterval(clientsInterval);
+      clearInterval(employeesInterval);
+      clearInterval(officesInterval);
+    };
+  }, []);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
@@ -32,33 +49,21 @@ const StatsOverview = () => {
           </p>
         </div>
 
-        {/* Stats grid with hover effects */}
+        {/* Stats grid with auto-increment effects */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
-          <div
-            onMouseEnter={() => handleHover(setExperience)}
-            onMouseLeave={() => handleHoverOut(setExperience, 1)}
-          >
+          <div>
             <div className="text-4xl font-bold">{experience}+</div>
             <div className="text-sm text-gray-600">Years of Experience</div>
           </div>
-          <div
-            onMouseEnter={() => handleHover(setClients)}
-            onMouseLeave={() => handleHoverOut(setClients, 10)}
-          >
+          <div>
             <div className="text-4xl font-bold">{clients}+</div>
             <div className="text-sm text-gray-600">Happy Clients</div>
           </div>
-          <div
-            onMouseEnter={() => handleHover(setEmployees)}
-            onMouseLeave={() => handleHoverOut(setEmployees, 20)}
-          >
+          <div>
             <div className="text-4xl font-bold">{employees}+</div>
             <div className="text-sm text-gray-600">Employees</div>
           </div>
-          <div
-            onMouseEnter={() => handleHover(setOffices)}
-            onMouseLeave={() => handleHoverOut(setOffices, 1)}
-          >
+          <div>
             <div className="text-4xl font-bold">{offices}</div>
             <div className="text-sm text-gray-600">Offices Around the World</div>
           </div>
