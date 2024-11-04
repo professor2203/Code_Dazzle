@@ -2,7 +2,6 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
 import Methodology from "../components/Methodology";
 import LeadershipSection from "../components/LeadershipSection";
 import FAQ from "../components/FAQ";
@@ -15,13 +14,15 @@ import Content from "../components/Content";
 import LeadershipCarousel from "../components/LeadershipCarousel";
 import HomeHero from "../components/HomeHero";
 import ChatBots from "../components/ChatBots";
+import Hero from "../components/Hero";
 export default function Home() {
 
   return (
     <>
 
       <div className="bg-white">
-        <HomeHero />
+       
+       <Hero />
         <AfterHero />
         <ServicesWithOffer />
         <StatsOverview />
