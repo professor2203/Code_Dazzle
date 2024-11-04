@@ -1,159 +1,87 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-// If you're using a different UI library, you can replace this with a basic div
-// or import your preferred card component
+// Card component
 const Card = ({ className, children }) => (
   <div className={`bg-white rounded-lg shadow-lg ${className}`}>{children}</div>
-)
+);
 
 Card.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node
-}
+};
 
+// Services data
 const services = [
   {
     id: 1,
-    name: "App Development",
-    title: "App Development",
-    description: "25 years of experience in app development with a focus of specific niche cutting-edge technologies to craft custom solutions that seamlessly integrate with your unique requirements, revolutionizing how you operate.",
+    name: "AI Decision-Making",
+    title: "AI Decision-Making",
+    description: "AI can assist us in making better decisions by analyzing vast amounts of data quickly, identifying patterns, and providing insights that help inform our choices. It can enhance decision-making processes across various fields, from business strategy to healthcare, ultimately leading to more informed and effective outcomes.",
     benefits: [
       {
-        title: "Cutting-Edge Expertise:",
-        description: "Our talented experts is proficient in utilizing the latest technologies to develop custom solutions tailored to your needs."
+        title: "Data-Driven Insights:",
+        description: "AI analyzes massive datasets and uncovers patterns that are not immediately visible to humans, enabling businesses to make informed decisions faster."
       },
       {
-        title: "Seamless Integration:",
-        description: "We specialize in integrating new technologies to solutions with your existing infrastructure, ensuring a smooth transition."
+        title: "Improved Efficiency:",
+        description: "With the help of AI, decision-making becomes more efficient as it automates data processing and reduces the time it takes to derive actionable insights."
       },
       {
-        title: "Comprehensive Development Services:",
-        description: "From machine learning to natural language processing, our AI Development Services elevate your organization's capabilities."
+        title: "Predictive Analysis:",
+        description: "AI's ability to predict outcomes based on historical data can help organizations make more accurate future projections."
       },
       {
-        title: "Empowering Organizational Capabilities:",
-        description: "Our mission is to empower organizations. We strive to not only stand out from in the dynamic landscape of AI technology."
+        title: "Objective Analysis:",
+        description: "AI removes bias in decision-making by focusing solely on data and patterns, improving fairness and objectivity."
       }
     ]
   },
   {
     id: 2,
-    name: "Machine Learning",
-    title: "Machine Learning",
-    description: "Leveraging cutting-edge machine learning technologies to create intelligent solutions that transform your business operations and drive innovation.",
+    name: "Why Choose Code Dazzle Pvt. Ltd?",
+    title: "Why Choose Code Dazzle Pvt. Ltd?",
+    description: "Opt for Code Dazzle Pvt. Ltd for our experienced team dedicated to delivering tailored solutions that align with your business objectives. We offer comprehensive support, prioritize quality at every stage, embrace innovation, and maintain a client-centric approach, ensuring a proven track record of successful outcomes for our clients.",
     benefits: [
       {
-        title: "Advanced AI Solutions:",
-        description: "Implement state-of-the-art machine learning algorithms tailored to your specific needs."
+        title: "Tailored Solutions:",
+        description: "We create customized solutions that fit the unique needs of your business and industry."
       },
       {
-        title: "Data-Driven Insights:",
-        description: "Extract valuable insights from your data to make informed business decisions."
+        title: "Experienced Team:",
+        description: "Our team has extensive expertise across a range of technologies and industries, ensuring that we deliver quality at every stage."
       },
       {
-        title: "Automated Processing:",
-        description: "Streamline operations with intelligent automation and predictive analytics."
+        title: "Innovation-Driven:",
+        description: "We embrace the latest technologies and practices to provide innovative and cutting-edge solutions."
       },
       {
-        title: "Scalable Architecture:",
-        description: "Build robust ML systems that grow with your business needs."
+        title: "Client-Centric Approach:",
+        description: "Our clients are at the heart of what we do, and we maintain close collaboration to ensure successful project outcomes."
       }
     ]
   },
   {
     id: 3,
-    name: "UI/UX",
-    title: "UI/UX Design",
-    description: "Creating intuitive and engaging user experiences through thoughtful design and modern interface solutions.",
+    name: "Industries We Cater To",
+    title: "Industries We Cater To",
+    description: "Code Dazzle Pvt. Ltd serves a diverse range of industries, including e-commerce, healthcare, finance, education, and technology. Our expertise allows us to create tailored solutions that address the unique challenges and requirements of each sector, helping businesses thrive in their respective markets.",
     benefits: [
       {
-        title: "User-Centered Design:",
-        description: "Focus on creating interfaces that delight and engage your users."
+        title: "E-commerce:",
+        description: "We build custom solutions to help online retailers enhance their platforms, streamline operations, and improve customer engagement."
       },
       {
-        title: "Modern Aesthetics:",
-        description: "Implement contemporary design trends while maintaining usability."
+        title: "Healthcare:",
+        description: "We create healthcare applications and solutions focused on improving patient care, streamlining workflows, and ensuring compliance with regulations."
       },
       {
-        title: "Responsive Solutions:",
-        description: "Ensure perfect functionality across all devices and screen sizes."
+        title: "Finance:",
+        description: "Our finance solutions help organizations manage complex data, ensure security, and optimize financial operations."
       },
       {
-        title: "Iterative Improvement:",
-        description: "Continuous refinement based on user feedback and analytics."
-      }
-    ]
-  },
-  {
-    id: 4,
-    name: "ChatGPT",
-    title: "ChatGPT Integration",
-    description: "Implementing advanced conversational AI solutions to enhance customer engagement and automate support.",
-    benefits: [
-      {
-        title: "Intelligent Automation:",
-        description: "Automate customer interactions with sophisticated AI conversations."
-      },
-      {
-        title: "24/7 Availability:",
-        description: "Provide round-the-clock support through AI-powered chat solutions."
-      },
-      {
-        title: "Custom Training:",
-        description: "Tailor the AI responses to match your brand voice and requirements."
-      },
-      {
-        title: "Scalable Support:",
-        description: "Handle multiple conversations simultaneously without compromising quality."
-      }
-    ]
-  },
-  {
-    id: 5,
-    name: "API Integration",
-    title: "API Integration",
-    description: "Seamlessly connecting systems and services through robust API integration solutions.",
-    benefits: [
-      {
-        title: "Seamless Connectivity:",
-        description: "Connect diverse systems and services with reliable API solutions."
-      },
-      {
-        title: "Custom Development:",
-        description: "Build tailored APIs that meet your specific integration needs."
-      },
-      {
-        title: "Security Focus:",
-        description: "Implement robust security measures to protect data transfers."
-      },
-      {
-        title: "Performance Optimization:",
-        description: "Ensure fast and efficient API operations with optimized code."
-      }
-    ]
-  },
-  {
-    id: 6, // Ensure this ID is unique
-    name: "Web Development",
-    title: "Web Development",
-    description: "Expert web development services to create responsive, user-friendly websites that drive engagement and conversions.",
-    benefits: [
-      {
-        title: "Custom Solutions:",
-        description: "We build tailor-made websites that cater to your specific business needs."
-      },
-      {
-        title: "Responsive Design:",
-        description: "Our websites are designed to work seamlessly on all devices."
-      },
-      {
-        title: "SEO-Optimized:",
-        description: "We implement best practices for search engine optimization to improve your site's visibility."
-      },
-      {
-        title: "Ongoing Support:",
-        description: "Our team provides continuous support and maintenance to ensure your website remains up-to-date."
+        title: "Education & Technology:",
+        description: "We develop innovative platforms and tools that support the evolving needs of both educators and learners in the education and technology sectors."
       }
     ]
   }
