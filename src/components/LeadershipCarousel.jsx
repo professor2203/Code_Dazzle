@@ -18,7 +18,7 @@ const leadershipData = [
   {
     name: "Mr Nayaz",
     title: "Co Founder",
-    image: "./nayaz.png", // Replace with actual image path
+    image: "./Nayaz.jpg", // Replace with actual image path
   },
   // Add more items as needed
 ];
