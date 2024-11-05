@@ -9,6 +9,8 @@ export default function Services() {
         backgroundImage="../assets/afterHero.png" // Use your desired header image
       />
 
+{/* <AppDevelopmentCard/> */}
+
       <div  className="p-12">
         <ServiceSection />
       </div>

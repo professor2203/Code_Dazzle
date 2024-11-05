@@ -26,19 +26,17 @@ export default function Footer() {
               />
             </RouterLink>
             <div className="flex gap-2">
-              <a href="#" className="text-white">
+              <a href="https://www.facebook.com/people/Tuba-Nayaz/pfbid08R63uEpQAKHWzhxb5w2xYNsa9GQHWVcppnJRwS8FG6BUkSmV4qCnpP2jqPXwCBzNl/?mibextid=LQQJ4d" className="text-white">
                 <Facebook />
               </a>
-              <a href="#" className="text-white">
+              <a href="https://www.linkedin.com/company/code-dazzle/about/" className="text-white">
                 <LinkedIn />
               </a>
-              <a href="#" className="text-white">
+              <a href="https://www.instagram.com/codedazzle.solution/profilecard/" className="text-white">
                 <Instagram />
               </a>
-              <a href="#" className="text-white">
-                <Twitter />
-              </a>
-              <a href="#" className="text-white">
+
+              <a href="https://www.youtube.com/@codedazzlesolution" className="text-white">
                 <YouTube />
               </a>
             </div>

@@ -1,41 +1,40 @@
-// Methodology.js
 import React from "react";
 import { FaProjectDiagram, FaRegClipboard, FaDrawPolygon, FaLaptopCode, FaRocket } from "react-icons/fa";
 
 const steps = [
   {
     icon: <FaProjectDiagram size={40} />,
-    title: "Understand pattern identification",
+    title: "Discovery and Consultation",
     description:
-      "Xeenu Methodology revolves around understanding pattern identification. It involves analyzing data to identify and extract significant patterns.",
+      "We begin by understanding your specific goals, challenges, and requirements through in-depth consultations. This step ensures we align our strategies with your vision and objectives.",
     step: "Step 1",
   },
   {
     icon: <FaRegClipboard size={40} />,
-    title: "Pattern mapping user stories",
+    title: "Strategic Planning",
     description:
-      "Pattern mapping user stories is the second step in Xeenu Methodology. It involves categorizing user stories according to recognized patterns.",
+      "Our team develops a comprehensive plan that outlines the project scope, timelines, and resources needed. This strategic framework serves as a roadmap for the entire development process.",
     step: "Step 2",
   },
   {
     icon: <FaDrawPolygon size={40} />,
-    title: "Wireframe and front end",
+    title: "Development and Implementation",
     description:
-      "After pattern mapping, our dedicated team creates wireframes and front-end designs. They align with the identified patterns and user stories.",
+      "We utilize agile methodologies to develop and implement your solution, ensuring flexibility and adaptability. Regular updates and feedback loops keep you informed and involved throughout the process.",
     step: "Step 3",
   },
   {
     icon: <FaLaptopCode size={40} />,
-    title: "Model development and training",
+    title: "Testing and Quality Assurance",
     description:
-      "Model development and training involves the development of machine learning models and training using the identified patterns and data.",
+      "Rigorous testing is conducted to ensure the solution meets the highest standards of quality and performance. We address any issues before launch, ensuring a seamless user experience.",
     step: "Step 4",
   },
   {
     icon: <FaRocket size={40} />,
-    title: "Development and deployment",
+    title: "Post-Launch Support and Optimization",
     description:
-      "Development and deployment is the final step in Xeenu Methodology. The developed models are integrated into the software and deployed for use.",
+      "After deployment, we provide ongoing support and optimization services to ensure your solution remains effective and up-to-date, helping you achieve long-term success and growth.",
     step: "Step 5",
   },
 ];
@@ -48,7 +47,7 @@ const Methodology = () => {
           Our Proven Approach to Achieve Your Objectives
         </h2>
         <p className="text-gray-600">
-          Achieve your business goals with our successful Code Dazzle Methodology, renowned for its structured planning and consistent results.
+          At Code Dazzle, we believe that a structured approach is key to achieving your business objectives effectively. Our proven five-step process ensures that we understand your needs, deliver high-quality solutions, and provide ongoing support for long-term success.
         </p>
       </div>
 

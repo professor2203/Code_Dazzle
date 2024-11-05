@@ -1,90 +1,81 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-// Card component
 const Card = ({ className, children }) => (
   <div className={`bg-white rounded-lg shadow-lg ${className}`}>{children}</div>
 );
 
 Card.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
-// Services data
 const services = [
   {
     id: 1,
-    name: "AI Decision-Making",
-    title: "AI Decision-Making",
-    description: "AI can assist us in making better decisions by analyzing vast amounts of data quickly, identifying patterns, and providing insights that help inform our choices. It can enhance decision-making processes across various fields, from business strategy to healthcare, ultimately leading to more informed and effective outcomes.",
+    name: "App Development",
+    title: "App Development",
+    description:
+      "25 years of experience in app development with a focus on specific niche cutting-edge technologies to craft custom solutions that seamlessly integrate with your unique requirements, revolutionizing how you operate.",
     benefits: [
       {
-        title: "Data-Driven Insights:",
-        description: "AI analyzes massive datasets and uncovers patterns that are not immediately visible to humans, enabling businesses to make informed decisions faster."
+        title: "Cutting-Edge Expertise:",
+        description:
+          "Our talented experts are proficient in utilizing the latest technologies to develop custom solutions tailored to your needs.",
       },
       {
-        title: "Improved Efficiency:",
-        description: "With the help of AI, decision-making becomes more efficient as it automates data processing and reduces the time it takes to derive actionable insights."
+        title: "User-Centric Design:",
+        description: "We prioritize user experience to create intuitive and engaging applications.",
       },
       {
-        title: "Predictive Analysis:",
-        description: "AI's ability to predict outcomes based on historical data can help organizations make more accurate future projections."
+        title: "Seamless Integration:",
+        description: "Our apps integrate smoothly with your existing systems, enhancing functionality.",
       },
-      {
-        title: "Objective Analysis:",
-        description: "AI removes bias in decision-making by focusing solely on data and patterns, improving fairness and objectivity."
-      }
-    ]
+    ],
   },
   {
     id: 2,
-    name: "Why Choose Code Dazzle Pvt. Ltd?",
-    title: "Why Choose Code Dazzle Pvt. Ltd?",
-    description: "Opt for Code Dazzle Pvt. Ltd for our experienced team dedicated to delivering tailored solutions that align with your business objectives. We offer comprehensive support, prioritize quality at every stage, embrace innovation, and maintain a client-centric approach, ensuring a proven track record of successful outcomes for our clients.",
+    name: "Web Development",
+    title: "Web Development",
+    description:
+      "Crafting responsive and visually appealing websites that not only attract visitors but also convert them into customers.",
     benefits: [
       {
-        title: "Tailored Solutions:",
-        description: "We create customized solutions that fit the unique needs of your business and industry."
+        title: "Custom Solutions:",
+        description: "Tailored web solutions that cater to your specific business needs.",
       },
       {
-        title: "Experienced Team:",
-        description: "Our team has extensive expertise across a range of technologies and industries, ensuring that we deliver quality at every stage."
+        title: "Responsive Design:",
+        description: "Ensuring your website looks great on any device, from desktop to mobile.",
       },
       {
-        title: "Innovation-Driven:",
-        description: "We embrace the latest technologies and practices to provide innovative and cutting-edge solutions."
+        title: "SEO Optimized:",
+        description: "Improving your website's visibility and ranking on search engines.",
       },
-      {
-        title: "Client-Centric Approach:",
-        description: "Our clients are at the heart of what we do, and we maintain close collaboration to ensure successful project outcomes."
-      }
-    ]
+    ],
   },
   {
     id: 3,
-    name: "Industries We Cater To",
-    title: "Industries We Cater To",
-    description: "Code Dazzle Pvt. Ltd serves a diverse range of industries, including e-commerce, healthcare, finance, education, and technology. Our expertise allows us to create tailored solutions that address the unique challenges and requirements of each sector, helping businesses thrive in their respective markets.",
+    name: "Machine Learning",
+    title: "Machine Learning Solutions",
+    description:
+      "Leveraging advanced algorithms to provide insights from your data, predict trends, and enhance decision-making processes.",
     benefits: [
       {
-        title: "E-commerce:",
-        description: "We build custom solutions to help online retailers enhance their platforms, streamline operations, and improve customer engagement."
+        title: "Data-Driven Insights:",
+        description: "Transform your data into actionable insights for strategic decisions.",
       },
       {
-        title: "Healthcare:",
-        description: "We create healthcare applications and solutions focused on improving patient care, streamlining workflows, and ensuring compliance with regulations."
+        title: "Predictive Analytics:",
+        description: "Anticipate market trends and customer behavior with predictive modeling.",
       },
       {
-        title: "Finance:",
-        description: "Our finance solutions help organizations manage complex data, ensure security, and optimize financial operations."
+        title: "Automation of Processes:",
+        description: "Automate repetitive tasks to improve efficiency and accuracy.",
       },
-      {
-        title: "Education & Technology:",
-        description: "We develop innovative platforms and tools that support the evolving needs of both educators and learners in the education and technology sectors."
-      }
-    ]
-  }
+    ],
+  },
+  // Add more services as needed
 ];
 
 function ServicesWithOffer() {
@@ -92,7 +83,7 @@ function ServicesWithOffer() {
 
   return (
     <div className="max-w-5xl container mx-auto p-4 mt-12">
-      <h2 className="font-semibold mb-6 text-[32px] text-[#000037]">Services We Offer</h2>
+      <h2 className="font-semibold mb-6 text-3xl text-[#000037]">Services We Offer</h2>
       <Card className="flex flex-col md:flex-row overflow-hidden shadow-lg">
         {/* Services Sidebar */}
         <div className="bg-[#1a1f3d] p-6 md:w-72 text-white rounded-t-lg md:rounded-l-lg md:rounded-tr-none">

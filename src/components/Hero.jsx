@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion"; // Import motion from Framer Motion
 import Navbar from "./Navbar"; // Ensure the path is correct
-
+import MyChatbot from "./MyChatbot";
 const Hero = () => {
   return (
     <div className="relative z-0 h-screen w-full overflow-hidden">
@@ -39,8 +39,15 @@ const Hero = () => {
         >
           Innovative Solutions for a Digital World
         </motion.p>
+
       </div>
+<div>
+
+</div>
+<MyChatbot/>
+
     </div>
+
   );
 };
 

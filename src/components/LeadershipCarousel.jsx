@@ -8,12 +8,12 @@ const leadershipData = [
   {
     name: "Miss Tuba",
     title: "Founder",
-    image: "./api.png", // Replace with actual image path
+    image: "./mam.JPG", // Replace with actual image path
   },
   {
     name: "Mr Umair",
     title: "Director",
-    image: "./umair.jpeg", // Replace with actual image path
+    image: "./UmairBhi.jpeg", // Replace with actual image path
   },
   {
     name: "Mr Nayaz",
@@ -56,7 +56,7 @@ function LeadershipCarousel() {
       <Slider {...settings}>
         {leadershipData.map((leader, index) => (
           <div key={index} className="p-4">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden text-center p-4 h-[300px] flex flex-col justify-between">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden text-center p-4 h-[500px] flex flex-col justify-between">
               <img
                 src={leader.image}
                 alt={leader.name}

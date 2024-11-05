@@ -1,7 +1,5 @@
 // src/pages/Home.jsx
 import React from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import Methodology from "../components/Methodology";
 import LeadershipSection from "../components/LeadershipSection";
 import FAQ from "../components/FAQ";
@@ -10,10 +8,12 @@ import BusinessGrowthCard from "../components/BusinessGrowthCard";
 import ServicesWithOffer from "../components/ServicesWithOffer";
 import StatsOverview from "../components/StatsOverview";
 import AfterHero from "../components/AfterHero";
-import Content from "../components/Content";
 import LeadershipCarousel from "../components/LeadershipCarousel";
-import HomeHero from "../components/HomeHero";
 import Hero from "../components/Hero";
+import LogoSlider from "../components/LogoSlider";
+import TestimonialComponents from "../components/TestimonialComponent";
+import MyChatbot from "../components/MyChatbot";
+// import Testimonialscomponent from "../components/TestimonialComponent";
 export default function Home() {
 
   return (
@@ -22,12 +22,15 @@ export default function Home() {
       <div className="bg-white">
        
        <Hero />
+       <MyChatbot/>
         <AfterHero />
-        <ServicesWithOffer />
+ <ServicesWithOffer />
         <StatsOverview />
+        <LogoSlider/>
         <BusinessGrowthCard />
+        {/* <TestimonialsComponent /> */}
+        <TestimonialComponents/>
         <Methodology />
-        <LeadershipSection />
         <IndustryExperts />
         <LeadershipCarousel />
         <FAQ />
