@@ -13,6 +13,7 @@ import Hero from "../components/Hero";
 import LogoSlider from "../components/LogoSlider";
 import TestimonialComponents from "../components/TestimonialComponent";
 import MyChatbot from "../components/MyChatbot";
+import MeetOurTeeml from "../components/MeetOurTeem";
 // import Testimonialscomponent from "../components/TestimonialComponent";
 export default function Home() {
 
@@ -34,6 +35,7 @@ export default function Home() {
         <IndustryExperts />
         <LeadershipCarousel />
         <FAQ />
+        <MeetOurTeeml/>
       </div>
     </>
   );

@@ -12,13 +12,18 @@ const leadershipData = [
   },
   {
     name: "Mr Umair",
-    title: "Director",
-    image: "./UmairBhi.jpeg", // Replace with actual image path
+    title: "Co Founder",
+    image: "./U.JPG", // Replace with actual image path
   },
   {
     name: "Mr Nayaz",
-    title: "Co Founder",
-    image: "./Nayaz.jpg", // Replace with actual image path
+    title: "Admin",
+    image: "./NayazBhiUpdated.png", // Replace with actual image path
+  },
+  {
+    name: "Mr Kamran",
+    title: "Manager",
+    image: "./KamraBHi.JPG", // Replace with actual image path
   },
   // Add more items as needed
 ];

@@ -16,36 +16,7 @@ const IndustryExperts = () => {
           </div>
           
           {/* Logos */}
-          <div className="flex items-center justify-center gap-8">
-            <div className="grid grid-cols-3 gap-8 items-center">
-              {/* P@SHA Logo */}
-              <div className="w-24 h-16">
-                <img
-                  src="/path-to-pasha-logo.png"
-                  alt="P@SHA Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              
-              {/* Clutch Badge */}
-              <div className="w-24 h-16">
-                <img
-                  src="/path-to-clutch-badge.png"
-                  alt="Clutch Badge"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              
-              {/* PSEB Logo */}
-              <div className="w-24 h-16">
-                <img
-                  src="/path-to-pseb-logo.png"
-                  alt="PSEB Logo"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>
