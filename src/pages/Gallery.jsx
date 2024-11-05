@@ -13,6 +13,6 @@ export default function Gallery() {
     heading="Gallery Code Dazzle" para="Lorem ipsum is simply dummy text of the printing and typesetting industry."/>
 
   
-  <Album />
+  {/* <Album /> */}
   </>;
 }

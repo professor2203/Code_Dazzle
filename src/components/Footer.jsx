@@ -73,7 +73,7 @@ export default function Footer() {
               <Phone fontSize="small" /> 03708050090
             </p>
             <p className="flex items-center gap-2 text-sm">
-              <Email fontSize="small" /> Example@gmail.com
+              <Email fontSize="small" />contact@codedazzle.org
             </p>
             <p className="flex items-center gap-2 text-sm">
               <LocationOn fontSize="small" /> Pakistan
