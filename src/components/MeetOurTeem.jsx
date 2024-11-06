@@ -12,7 +12,7 @@ const leadershipData = [
   {
     name: "Muhammad Owais Shaikh",
     title: "Full-Stack Developer",
-    image: "./Owais.jpg", // Replace with actual image path
+    image: "./Owa.jpeg", // Replace with actual image path
   },
   {
     name: "Muhammad Maaz Tahir",
