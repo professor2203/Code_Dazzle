@@ -17,7 +17,7 @@ const leadershipData = [
   {
     name: "Muhammad Maaz Tahir",
     title: "Frontend Developer",
-    image: "./Mazz.jpg", // Replace with actual image path
+    image: "./MAZZZ.jpeg", // Replace with actual image path
   },
   {
     name: "Muhammad Arsalan Aftab",
@@ -57,6 +57,12 @@ const leadershipData = [
     title: "Frontend Developer",
     image: "./Nasir.jpg", // Replace with actual image path
   },
+  {
+    name: "Muhammad Jazil Siddiqi",
+    title: "Frontend Developer",
+    image: "./J.jpeg", // Replace with actual image path
+  },
+  
   // Add more items as needed
 ];
 
