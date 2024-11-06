@@ -45,7 +45,7 @@ const leadershipData = [
   {
     name: "Ziyan Ahmed",
     title: "Social Media Marketer",
-    image: "./Zayan.jpg", // Replace with actual image path
+    image: "./Zayanchapry.JPG" 
   },
   {
     name: "Muhammad Samee",
