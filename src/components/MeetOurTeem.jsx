@@ -7,7 +7,7 @@ const leadershipData = [
   {
     name: "Abdullah Shah",
     title: "FullStack Developer",
-    image: "./", // Replace with actual image path
+    image: "./Abdullah.jpeg", // Replace with actual image path
   },
   {
     name: "Muhammad Owais Shaikh",
@@ -22,7 +22,7 @@ const leadershipData = [
   {
     name: "Muhammad Arsalan Aftab",
     title: "Frontend Developer",
-    image: "./Arsalan.jpg", // Replace with actual image path
+    image: "./Arsalan.jpeg", // Replace with actual image path
   }, {
     name: "Taha Sheikh",
     title: "Frontend Developer",
@@ -36,11 +36,11 @@ const leadershipData = [
   {
     name: "Muzammil Shamim",
     title: "UI/UX Developer",
-    image: "./", // Replace with actual image path
+    image: "./MUzamil.jpg", // Replace with actual image path
   }, {
     name: "Hafiz Sharjeel",
     title: "Frontend Developer",
-    image: "./", // Replace with actual image path
+    image: "./Sharjel.jpeg", // Replace with actual image path
   },
   {
     name: "Ziyan Ahmed",
@@ -50,11 +50,7 @@ const leadershipData = [
   {
     name: "Muhammad Samee",
     title: "Frontend Developer",
-    image: "./", // Replace with actual image path
-  },{
-    name: "Muhammad Jazil Siddiqi",
-    title: "Frontend Developer",
-    image: "./", // Replace with actual image path
+    image: "./Samee.jpg", // Replace with actual image path
   },
   {
     name: "Naseer Ahmed",

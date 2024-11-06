@@ -47,12 +47,12 @@ export default function Footer() {
             <h6 className="mb-2 text-lg font-semibold">Services</h6>
             <ul className="space-y-1">
               {[
-                "Predictive Modelling",
-                "Chat GPT Integration",
-                "Natural Language Processing",
-                "Machine Learning",
-                "Computer Vision",
-                "Big Data Analytics",
+                "Android App Development ",
+                "API Integration",
+                "Web App Development", 
+                "Data Analytics",
+                "Chat GPT integration", 
+                "Machine learning"
               ].map((service) => (
                 <li key={service}>
                   <RouterLink
